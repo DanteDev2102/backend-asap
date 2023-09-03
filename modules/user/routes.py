@@ -56,7 +56,7 @@ async def unlink_user(code:str):
 async def login(login:LoginModel):
     user = controller.login(login)
 
-    if isinstance(user, str)
+    if isinstance(user, str):
         return {
             "msg": user,
             "code": 403,
