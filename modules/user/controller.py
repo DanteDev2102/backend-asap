@@ -48,7 +48,7 @@ class UserController:
         if not user:
             return "wrong data"
 
-        if user.password == login.password
+        if user.password == login.password:
             return user
 
         return "wrong data"
