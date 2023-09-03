@@ -23,10 +23,6 @@ class UserController:
 
         return new_user
 
-    # @staticmethod
-    # def update(user_id:int, fields: dict):
-    #     pass
-
     @staticmethod
     def unlink(code:str):
         user = session.query(User).filter_by(code=code).first()
