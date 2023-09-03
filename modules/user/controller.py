@@ -47,7 +47,7 @@ class UserController:
 
     @staticmethod
     def login(login:LoginModel):
-        user = session.query(User).filter_by(code=code).first()
+        user = session.query(User).filter_by(code=code,active=True).first()
 
         if not user:
             return "wrong data"
