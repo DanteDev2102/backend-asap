@@ -9,6 +9,7 @@ class ERol(enum.Enum):
     production_control = "PC"
     seller = "V"
     user = "U"
+    admin = "A"
 
 
 class UserModel(Base):
@@ -19,6 +20,11 @@ class UserModel(Base):
     code: str
     password: str
     role: ERol
+
+
+class LoginModel(Base):
+    code: str
+    password: str
 
 
 class User(BaseModel):
